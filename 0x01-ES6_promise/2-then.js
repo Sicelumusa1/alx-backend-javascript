@@ -1,4 +1,4 @@
-export default function handleResponsefromAPI(promise) {
+export default function handleResponseFromAPI(promise) {
   return promise
       .then((response) => ({
         status: 200,

@@ -3,5 +3,3 @@ export default function getResponseFromAPI() {
     resolve('Response from API');
   });
 }
-
-module.exports = getResponseFromAPI;

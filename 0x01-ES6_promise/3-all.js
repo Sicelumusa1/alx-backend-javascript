@@ -6,7 +6,7 @@ export default function handleProfileSignup(){
   const userPromise = createUser();
 
   Promise.all([photoPromise, userPromise])
-    .then(([photoResponse, userResponse] => {
+    .then(([photoResponse, userResponse]) => {
       const { body: photoBody } = photoResponse;
       const { body, firstName, lastName } = userResponse;
       
