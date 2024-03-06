@@ -1,8 +1,10 @@
-function signUpUser(firstName, lastName) {
+export default function signUpUser(firstName, lastName) {
   const userObject = {
     firstName,
-    lastName
+    lastName,
   };
 
   return Promise.resolve(userObject);
 }
+
+module.exports = signUpUser;
