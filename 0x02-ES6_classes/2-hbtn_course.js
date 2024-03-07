@@ -40,7 +40,7 @@ export default class HolbertonCourse {
 
     // setter for name
     set students (newStudents) {
-        if (Array.isArray(newStudents) {
+        if (Array.isArray(newStudents)) {
             this._students = newStudents;
         } else {
             throw new Error('sttudents must be an array of strings.');
