@@ -1,7 +1,7 @@
 import Currency from './3-currency';
 
 export default class Pricing {
-    constructor {
+    constructor(amount, currency) {
         this._amount = amount;
 	this._currency = currency;
     }
@@ -11,7 +11,7 @@ export default class Pricing {
         return this._amount;
     }
 
-    // setter for length
+    // setter for amount
     set amount(newAmount) {
         if (typeof newAmount === 'number') {
             this._amount = newAmount;
@@ -20,12 +20,12 @@ export default class Pricing {
         }
     }
 
-    // getter for amount
+    // getter for currency
      get currency() {
         return this._currency;
     }
 
-    // setter for length
+    // setter for currency
     set currency(newCurrency) {
         if (newCurrency instanceof Currency) {
             this._currency = newCurrency;
