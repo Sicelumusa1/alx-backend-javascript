@@ -1,6 +1,6 @@
-Import Currency from './3-currency';
+import Currency from './3-currency';
 
-class Pricing {
+export default class Pricing {
     constructor {
         this._amount = amount;
 	this._currency = currency;
@@ -48,5 +48,3 @@ class Pricing {
 	}
     }
 }
-
-export default Pricing;
