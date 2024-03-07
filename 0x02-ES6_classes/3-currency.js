@@ -4,12 +4,12 @@ export default class Currency {
 	this._name = name;
     }
 
-    // getter for length
+    // getter for code
     get code() {
         return this._code;
     }
 
-    // setter for length
+    // setter for code
     set code(newCode) {
         if (typeof newCode === 'string') {
             this._code = newCode;
@@ -18,12 +18,12 @@ export default class Currency {
         }
     }
 
-    // getter for length
+    // getter for name
     get name() {
         return this._name;
     }
 
-    // setter for length
+    // setter for name
     set name(newName) {
         if (typeof newName === 'string') {
             this._name = newName;
@@ -33,7 +33,7 @@ export default class Currency {
     }
 
     //method to display full currency
-    displayFullCurrency {
+    displayFullCurrency() {
         return `${this._name} (${this._code})`;
     }
 }
