@@ -3,7 +3,7 @@ export default function getListStudentIds(students) {
 
     //check if students is an array
     if (!Array.isArray(students)) {
-        throw new Error("Students must be an array");
+        throw new Error([]);
     }
     
     const studentId = students.map(student => student.id);
