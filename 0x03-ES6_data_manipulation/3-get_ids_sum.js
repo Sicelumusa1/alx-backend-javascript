@@ -1,6 +1,5 @@
-import getListStudents from "./0-get_list_students.js";
+import './0-get_list_students';
+
 export default function getStudentIdsSum(students) {
-    students.reduce((accumulator, current) => {
-        return accumulator + current.id;
-    }, 0);
+  students.reduce((accumulator, current) => accumulator + current.id, 0);
 }

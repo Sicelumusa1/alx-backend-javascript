@@ -1,11 +1,11 @@
-import getListStudents from "./0-get_list_students.js";
-export default function getListStudentIds(students) {
+import './0-get_list_students';
 
-    //check if students is an array
-    if (!Array.isArray(students)) {
-        throw new Error([]);
-    }
-    
-    const studentId = students.map(student => student.id);
-    return studentId;
+export default function getListStudentIds(students) {
+  // check if students is an array
+  if (!Array.isArray(students)) {
+    throw new Error([]);
+  }
+
+  const studentId = students.map((student) => student.id);
+  return studentId;
 }
