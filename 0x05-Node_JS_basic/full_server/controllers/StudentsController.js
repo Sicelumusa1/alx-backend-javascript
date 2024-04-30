@@ -1,5 +1,5 @@
-const { readDatabase } = require('../utils');
-const path = require('path');
+import { readDatabase } from '../utils.js';
+import path from 'path';
 
 class StudentsController {
   static async getAllStudents(req, res) {
@@ -48,4 +48,4 @@ class StudentsController {
   }
 }
 
-module.exports = StudentsController;
+export default StudentsController;
