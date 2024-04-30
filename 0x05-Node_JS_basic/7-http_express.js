@@ -63,7 +63,7 @@ app.get('/students', async (req, res) => {
 
   try {
     const studentsByField = await readDatabase(filePath);
-    const sortedFields = Object.keys(studentsByField).sort((a, b) = > a.toLowerCase().localeCompare(b.toLowerCase()));
+    const sortedFields = Object.keys(studentsByField).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
     
 
     for (const field of sortedFields) {
