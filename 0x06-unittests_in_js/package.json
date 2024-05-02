@@ -4,11 +4,12 @@
   "Description": "",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha *.test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "assert": "^2.1.0",
     "chai": "^5.1.0",
     "mocha": "^10.4.0"
   }
