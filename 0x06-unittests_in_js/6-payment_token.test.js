@@ -1,10 +1,10 @@
 const chai = require('chai');
 const expect = chai.expect;
-const getPaymentTokenFromAPI = require('./6-pyment_toke.js');
+const getPaymentTokenFromAPI = require('./6-pyment_token.js');
 
 describe('getPaymentTokenFromAPI',() => {
 
-  it('should retun aresolved promise with the correct data when success is true', (done) => {
+  it('should retun a resolved promise with the correct data when success is true', (done) => {
     const promise = getPaymentTokenFromAPI(true);
 
     promise
