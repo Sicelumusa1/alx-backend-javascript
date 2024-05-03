@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.status(200).send('Welcome to the payment system');
+  res.status(200).contentType('text/plain').send('Welcome to the payment system');
 });
 
 const server = app.listen(7865, () => {

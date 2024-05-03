@@ -19,6 +19,18 @@ describe('Index Page', () => {
     });
   });
 
+  it('shoult return content-type as text/plain for GET /', (done) => {
+    request.get('http://localhost:7865/', (error, response) => {
+      if (error) {
+        return done(error);
+      }
+
+      expect(response.headers['content-type']).to.include('text/plain');
+
+      done();
+    })
+  })
+
   after(() => {
     server.close();
   })
