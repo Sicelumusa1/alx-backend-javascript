@@ -1,9 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
-const chaiHttp = require('chai-http');
+const request = require('request');
 const app = require('./api.js');
 
-chai.use(chaiHttp);
 
 describe('Index Page', () => {
   let server;
@@ -12,18 +11,19 @@ describe('Index Page', () => {
     server = app.listen(7865, done);
   });
 
+  after(() => {
+    server.close();
+  })
+
   it('should return the correct status code and message for GET /', (done) => {
-    chai
-      .request(app)
-      .get('/')
-      .end((error, response) => {
-        expect(response).to.have.status(200);
-        expect(response.text).to.equal('Welcome to the payment system');
+
+    request('http://localhost:7865/', (error, response, body) => {
+      if (error) {
+        done(error);
+      } else {
+	expect(response.statusCode).to.equal(200);
+        expect(body).to.equal('Welcome to the payment system');
         done();
       });
-  });
-
-  after((done) => {
-    server.close(done);
   });
 });
