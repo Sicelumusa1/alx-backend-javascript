@@ -1,11 +1,15 @@
 const chai = require('chai');
 const expect = chai.expect;
-const request = require('request');
+const chaiHttp = require('chai-http');
 const app = require('./api.js');
 
+chai.use(chaiHttp);
+
 describe('Index Page', () => {
+  let server;
+	
   before((done) => {
-    app.listen(7865, done);
+    server = app.listen(7865, done);
   });
 
   it('should return the correct status code and message for GET /', (done) => {
@@ -16,6 +20,10 @@ describe('Index Page', () => {
         expect(response).to.have.equal(200);
         expect(response.text).to.equal('Welcome to the payment system');
         done();
-    });
+      });
+  });
+
+  after((done) => {
+    server.close(done);
   });
 });
