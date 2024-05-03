@@ -1,19 +1,10 @@
 const chai = require('chai');
 const expect = chai.expect;
 const request = require('request');
-const app = require('./api.js');
+const { server } = require('./api.js');
 
 
 describe('Index Page', () => {
-  let server;
-	
-  before((done) => {
-    server = app.listen(7865, done);
-  });
-
-  after(() => {
-    server.close();
-  })
 
   it('should return the correct status code and message for GET /', (done) => {
 
@@ -26,4 +17,8 @@ describe('Index Page', () => {
         done();
       });
   });
+
+  after(() => {
+    server.close();
+  })
 });
