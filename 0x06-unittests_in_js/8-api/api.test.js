@@ -17,7 +17,7 @@ describe('Index Page', () => {
       .request(app)
       .get('/')
       .end((error, response) => {
-        expect(response).to.have.equal(200);
+        expect(response).to.have.status(200);
         expect(response.text).to.equal('Welcome to the payment system');
         done();
       });
